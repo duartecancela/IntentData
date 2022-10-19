@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IntentData</string>
+    <string name="text_view_person_name_label">Name</string>
+    <string name="text_view_person_name">Person Name</string>
+    <string name="text_view_number_label">Number</string>
+    <string name="text_view_number">Person Number</string>
+    <string name="edit_text_name">Name</string>
+    <string name="edit_text_number">Number</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_save">Save</string>
+</resources>
