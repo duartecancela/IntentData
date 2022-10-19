@@ -7,25 +7,30 @@ import android.widget.Button
 import android.widget.EditText
 
 class FormActivity : AppCompatActivity() {
+
+    private lateinit var editTextNumber: EditText
+    private lateinit var editTextPersonName: EditText
+    private lateinit var buttonSave: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
 
-        val editTextPersonName = findViewById<EditText>(R.id.editTextPersonName)
-        val editTextAge = findViewById<EditText>(R.id.editTextNumber)
-        val buttonSave = findViewById<Button>(R.id.buttonSave)
+        this.editTextPersonName = findViewById<EditText>(R.id.editTextPersonName)
+        this.editTextNumber = findViewById<EditText>(R.id.editTextNumber)
+        this.buttonSave = findViewById<Button>(R.id.buttonSave)
 
         buttonSave.setOnClickListener {
-
             val personName = editTextPersonName.text.toString()
-            val personNumber = editTextAge.text.toString()
+            val personNumber = editTextNumber.text.toString()
 
-            val intent = Intent()
-            intent.putExtra("name", personName.toString())
-            intent.putExtra("number", personNumber.toString())
+            val intent = Intent().apply {
+                putExtra("name", personName)
+                putExtra("number", personNumber)
+            }
+
             setResult(RESULT_OK, intent)
             finish()
-
         }
 
     }

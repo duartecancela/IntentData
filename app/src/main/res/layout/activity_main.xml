@@ -14,9 +14,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/text_view_person_name_label"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/textViewPersonName"
@@ -25,11 +28,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/text_view_person_name"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAgeLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPersonNameLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPersonNameLabel"
+        tools:text="@string/text_view_person_name" />
 
     <TextView
         android:id="@+id/textViewAgeLabel"
@@ -39,7 +44,9 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:text="@string/text_view_number_label"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNumber"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPersonName" />
 
@@ -50,11 +57,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/text_view_number"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEdit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAgeLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgeLabel"
+        tools:text="@string/text_view_number"
+        tools:textSize="24sp" />
 
     <Button
         android:id="@+id/buttonEdit"
@@ -64,7 +74,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/button_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumber" />
 
