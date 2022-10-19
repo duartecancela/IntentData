@@ -41,6 +41,5 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this, FormActivity::class.java)
             launcher.launch(i)
         }
-
     }
 }
