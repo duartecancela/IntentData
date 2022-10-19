@@ -24,11 +24,13 @@ class FormActivity : AppCompatActivity() {
             val personName = editTextPersonName.text.toString()
             val personNumber = editTextNumber.text.toString()
 
+            // create intent variable that olds data when activity close
             val intent = Intent().apply {
                 putExtra("name", personName)
                 putExtra("number", personNumber)
             }
 
+            // close activity
             setResult(RESULT_OK, intent)
             finish()
         }
