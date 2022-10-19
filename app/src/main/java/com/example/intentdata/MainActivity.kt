@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
 
-            if(result.resultCode == RESULT_OK) {
+            if (result.resultCode == RESULT_OK) {
                 val data = result.data!!
                 val name = data.getStringExtra("name")
                 val nr = data.getStringExtra("number")

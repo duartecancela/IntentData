@@ -23,7 +23,6 @@ class FormActivity : AppCompatActivity() {
         buttonSave.setOnClickListener {
             val personName = editTextPersonName.text.toString()
             val personNumber = editTextNumber.text.toString()
-
             // create intent variable that olds data when activity close
             val intent = Intent().apply {
                 putExtra("name", personName)
@@ -34,6 +33,5 @@ class FormActivity : AppCompatActivity() {
             setResult(RESULT_OK, intent)
             finish()
         }
-
     }
 }
