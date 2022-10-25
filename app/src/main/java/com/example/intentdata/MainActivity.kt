@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var imageViewPhotoMain: ImageView
     private lateinit var textViewPersonName: TextView
     private lateinit var textViewNumber: TextView
     private lateinit var buttonEdit: Button
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        this.imageViewPhotoMain = findViewById(R.id.imageViewPhotoMain)
         this.textViewPersonName = findViewById<TextView>(R.id.textViewPersonName)
         this.textViewNumber = findViewById<TextView>(R.id.textViewNumber)
         this.buttonEdit = findViewById<Button>(R.id.buttonEdit)
